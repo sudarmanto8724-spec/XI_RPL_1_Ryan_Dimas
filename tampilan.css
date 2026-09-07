@@ -1,48 +1,212 @@
+/* ===== RESET DASAR ===== */
 *{
- margin: 2;
- padding: 9;
+ margin: 0;
+ padding: 0;
  box-sizing: border-box;
 }
 
-/*Membuat Tampilan Utama Navbar*/
+body {
+    background-color: rgb(162, 34, 197);
+}
+
+.paragraf {
+    color: rgba(255, 166, 0, 0.736);
+    text-align: center;
+}
+
+/* ===== NAVBAR ===== */
 .navbar{
  display: flex;
  justify-content: space-between;
  align-items: center;
  background-color: rgb(64, 43, 226);
- color:rgb(255, 0, 204);
+ color: rgb(255, 0, 204);
  padding: 1rem 3rem;
+ flex-wrap: wrap;
 }
 
-/*Membuat Tampilan Logo*/
 .navbar .logo{
  font-size: 2rem;
  font-weight: bold;
 }
 
-/*Membuat Tampilan Daftar Menu*/
 .nav-links{
  display: flex;
  list-style: none;
  gap: 25px;
+ flex-wrap: wrap;
 }
 
-/*Membuat Tampilan teks Link*/
 .nav-links a{
-    color:aliceblue;
+    color: aliceblue;
     text-decoration: none;
     font-size: 16px;
-    font-family:impact;
+    font-family: impact;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-/*Membuat Tampilan Hover*/
 .nav-links a:hover{
-    background-color:rgb(249, 0, 254);
-    color:rgb(255, 255, 255);
+    background-color: rgb(249, 0, 254);
+    color: rgb(255, 255, 255);
+}
+
+.nav-links a.aktif{
+    background-color: rgb(120, 100, 255);
+}
+
+/* ===== HALAMAN KONTAK ===== */
+h1, h2 {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#namaAnggota {
+    color: white;
+    font-size: 18px;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(64, 43, 226);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 10px auto;
+}
+
+button:hover {
+    background: rgb(100, 80, 255);
+    transform: scale(1.05);
+}
+
+/* ===== HALAMAN RESEP ===== */
+.container-resep {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.judul-resep {
+    text-align: center;
+    color: #222;
+    transition: color 0.4s ease;
+}
+
+.judul-resep:hover {
+    color: rgb(220, 50, 50);
+}
+
+.kotak-gambar {
+    text-align: center;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gambar-ramen {
+    width: 70%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.gambar-ramen:hover {
+    transform: scale(1.08);
+}
+
+.container-resep h2 {
+    color: rgb(64, 43, 226);
+    margin: 20px 0 8px;
+    text-align: left;
+}
+
+.daftar-bahan, .daftar-cara {
+    padding-left: 25px;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #333;
+}
+
+.tombol-popup {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 25px;
+    background: rgb(64, 43, 226);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tombol-popup:hover {
+    background: rgb(100, 80, 255);
+    transform: scale(1.05);
+}
+
+/* ===== POP-UP ===== */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.popup-konten {
+    background-color: #fff;
+    margin: 12% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 450px;
+    position: relative;
+    animation: muncul 0.4s;
+}
+
+@keyframes muncul {
+    from {transform: scale(0.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.tutup {
+    color: #888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tutup:hover {
+    color: #000;
+}
+
+.popup-konten h3 {
+    color: rgb(64, 43, 226);
+    margin-bottom: 10px;
+}
+
+.popup-konten p {
+    color: #333;
+    line-height: 1.6;
 }
 
 #items{
     font-size: 16px;
-    font-family:impact;
+    font-family: impact;
     color: rgb(0, 247, 255);
 }

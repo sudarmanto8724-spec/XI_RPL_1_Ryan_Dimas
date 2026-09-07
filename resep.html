@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Makanan - XI RPL 1</title>
+    <link rel="stylesheet" href="tampilan.css">
+</head>
+<body>
+    <!-- Navigasi Sama Seperti Halaman Lain -->
+    <nav class="navbar">
+        <div class="logo">XI RPL 1</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Halaman Utama</a></li>
+            <li><a href="resep.html" class="aktif">Resep Makanan</a></li>
+            <li><a href="#">Surat Izin</a></li>
+            <li><a href="kontak_anggota.html">Kontak Anggota</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-resep">
+        <h1 class="judul-resep">🍜 RESEP MEMBUAT RAMEN LEZAT</h1>
+
+        <!-- Gambar Ramen -->
+        <div class="kotak-gambar">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500" 
+                 alt="Ramen Lezat" class="gambar-ramen">
+        </div>
+
+        <h2>Bahan-bahan:</h2>
+        <ul class="daftar-bahan">
+            <li>200 gram mi ramen segar</li>
+            <li>1 liter kaldu ayam/babi</li>
+            <li>2 sdm kecap asin</li>
+            <li>1 sdm miso pasta</li>
+            <li>1 siung bawang putih (cincang halus)</li>
+            <li>1 ruas jahe (geprek)</li>
+            <li>Topping: telur rebus, daging ayam/babi, daun bawang, nori</li>
+        </ul>
+
+        <h2>Cara Membuat:</h2>
+        <ol class="daftar-cara">
+            <li>Panaskan kaldu dengan api kecil, masukkan bawang putih dan jahe. Rebus 10 menit lalu saring.</li>
+            <li>Tambahkan kecap asin dan miso, aduk hingga larut. Koreksi rasa.</li>
+            <li>Rebus mi di air mendidih terpisah selama 2–3 menit, tiriskan.</li>
+            <li>Tata mi di mangkuk, tuang kuah panasnya.</li>
+            <li>Susun topping: belahan telur rebus, daging, daun bawang, dan nori di atasnya.</li>
+            <li>Sajikan selagi hangat! 🎉</li>
+        </ol>
+
+        <!-- Tombol Pop-up -->
+        <button class="tombol-popup" onclick="tampilkanPopUp()">💡 Lihat Tips Tambahan</button>
+    </div>
+
+    <!-- Kotak Pop-up -->
+    <div id="popupBox" class="popup">
+        <div class="popup-konten">
+            <span class="tutup" onclick="tutupPopUp()">&times;</span>
+            <h3>✨ Tips Membuat Ramen Enak</h3>
+            <p>• Gunakan kaldu yang direbus lama agar gurih alaminya keluar.<br>
+               • Jangan rebus mi terlalu lama agar tetap kenyal.<br>
+               • Telur rebus setengah matang: rebus 6–7 menit lalu rendam air es.</p>
+        </div>
+    </div>
+
+</body>
+</html>
