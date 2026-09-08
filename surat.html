@@ -26,20 +26,17 @@
             <form action="proses_surat.php" method="post" target="_blank" onsubmit="return validasiForm()">
                 <div class="form-group">
                     <label for="nama">Nama Lengkap:</label>
-                    <input type="text" id="nama" name="nama" id="nama"
-                        required placeholder="contoh: Budiman">
+                    <input type="text" id="nama" name="nama" required placeholder="contoh: Budiman">
                 </div>
 
                 <div class="form-group">
-                    <Label for="NIS">NIS:</Label>
-                    <input type="text" id="NIS" name="NIS" id="NIS"
-                        required placeholder="contoh: 257089">
+                    <label for="nis">NIS:</label>
+                    <input type="text" id="nis" name="nis" required placeholder="contoh: 257089">
                 </div>
 
                 <div class="form-group">
                     <label for="kelas">Kelas:</label>
-                    <input type="text" id="kelas" name="kelas" id="kelas"
-                        required placeholder="contoh: XI RPL 1">
+                    <input type="text" id="kelas" name="kelas" required placeholder="contoh: XI RPL 1">
                 </div>
 
                 <div class="form-group">
@@ -51,25 +48,25 @@
                         <option value="Keperluan Magang">Keperluan Magang</option>
                         <option value="Izin Terlambat">Izin Terlambat</option>
                         <option value="lainnya">Lainnya</option>
-                    </select>  
+                    </select>
                 </div>
 
-            <div class="form-row">
+                <div class="form-row">
                     <div class="form-group half">
-                        <label for="tanggal_mulai">Tanggal Mulai:</label>
-                        <input type="date" id="tgl_mulai" name="tgl_mulai" id="tgl_mulai" required>
+                        <label for="tgl_mulai">Tanggal Mulai:</label>
+                        <input type="date" id="tgl_mulai" name="tgl_mulai" required>
                     </div>
 
-                <div class="form-group half">
-                    <label for="tanggal_selesai">Tanggal Selesai:</label>
-                    <input type="date" id="tgl_selesai" name="tgl_selesai" id="tgl_selesai" required>
+                    <div class="form-group half">
+                        <label for="tgl_selesai">Tanggal Selesai:</label>
+                        <input type="date" id="tgl_selesai" name="tgl_selesai" required>
+                    </div>
                 </div>
-            </div>
 
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="keterangan">Keterangan / Detail Alasan:</label>
                     <textarea id="keterangan" rows="3" name="keterangan" placeholder="Masukkan Detail Alasan..."></textarea>
-                 </div>
+                </div>
 
                 <button type="submit" class="btn-submit">Ajukan Surat</button>
             </form>

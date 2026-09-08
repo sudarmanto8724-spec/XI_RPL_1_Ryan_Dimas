@@ -32,11 +32,14 @@ window.onclick = function(event) {
 }
 
 // === FUNGSI HALAMAN SURAT IZIN ===
-function validasiFrom() {
-    var tglMulai = document.getElementById("tglMulai").value;
-    var tglSelesai = document.getElementById("tglSelesai").value;
-}
-    if(new Date(tglSelesai) < new Date(tglMulai)) {
-        alert('Tanggal Selesai Tidak Boleh Lebih Awal Lebih Dari Tanggal Mulai');
+function validasiForm() {
+    var tglMulai = document.getElementById("tgl_mulai").value;
+    var tglSelesai = document.getElementById("tgl_selesai").value;
+
+    if (tglMulai && tglSelesai && new Date(tglSelesai) < new Date(tglMulai)) {
+        alert('Tanggal Selesai Tidak Boleh Lebih Awal Dari Tanggal Mulai');
+        return false;
     }
+
     return true;
+}
